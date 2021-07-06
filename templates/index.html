@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Deployment</title>
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        * {box-sizing: border-box;}
+        
+        input[type=number] {
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        }
+
+        input[type=button], input[type=submit], input[type=reset] {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+        }
+        </style>
+</head>
+<body>
+    <h1>Predict if you have heart disease</h1>
+    <h3>Enter values</h3>
+    <form action="/" method="post">
+        <input type="number" name="age" id="" placeholder="age"><br>
+        <input type="number" name="sex" id="" placeholder="sex: 1 = male, 0 = female"><br>
+        <input type="number" name="cp" id="" placeholder="chest pain, 1 = typical angina, 2 = atypical angina, 3 = non — anginal pain, 4 = asymptotic"><br>
+        <input type="number" name="trestbps" id="" placeholder="Resting Blood Pressure"><br>
+        <input type="number" name="chol" id="" placeholder="Serum Cholestrol"><br>
+        <input type="number" name="fbs" id="" placeholder="Fasting Blood Sugar: 1 (true) else : 0 (false)"><br>
+        <input type="number" name="restecg" id="" placeholder=" Resting ECG: 0 = normal, 1 = having ST-T wave abnormality, 2 = left ventricular hyperthrophy"><br>
+        <input type="number" name="thalach" id="" placeholder="Max heart rate achieved"><br>
+        <input type="number" name="exang" id="" placeholder="Exercise induced angina : 1 = yes, 0 = no"><br>
+        <input type="number" name="oldpeak" id="" placeholder="ST depression induced by exercise relative to rest"><br>
+        <input type="number" name="slope" id="" placeholder="Peak exercise ST segment : 1 = upsloping, 2 = flat, 3 = downsloping"><br>
+        <input type="number" name="ca" id="" placeholder="Number of major vessels (0–3) colored by flourosopy"><br>
+        <input type="number" name="thal" id="" placeholder="displays the thalassemia : 1 = normal, 2 = fixed defect, 3 = reversible defect"><br>
+        
+        <input type="submit" value="Submit">
+
+        <h1>You have a {{ prediction }}% chance of having a heart condition, please consult a doctor</h1>
+    </form>
+    
+</body>
+</html>
